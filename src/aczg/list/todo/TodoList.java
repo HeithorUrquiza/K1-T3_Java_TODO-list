@@ -27,6 +27,10 @@ public class TodoList {
                 throw new RuntimeException("Tarefa já cadastrada");
             }
         }
+
+        if (task.getEndsDate().isBefore(LocalDate.now())) {
+            throw new RuntimeException("Data de encerramento inválida");
+        }
         this.taskList.add(task);
         this.taskList.sort(Comparator.comparing(Task::getPriority).reversed());
     }
@@ -48,11 +52,11 @@ public class TodoList {
         var taskFound = this.getTaskByName(name);
 
         Optional.ofNullable(task.getName()).ifPresent(taskFound::setName);
-//        taskFound.setDescription(task.getDescription());
-//        taskFound.setCategory(task.getCategory());
-//        taskFound.setPriority(task.getPriority());
-//        taskFound.setEnds_date(task.getEnds_date());
-//        taskFound.setStatus(task.getStatus());
+        Optional.ofNullable(task.getDescription()).ifPresent(taskFound::setDescription);
+        Optional.ofNullable(task.getCategory()).ifPresent(taskFound::setCategory);
+        Optional.ofNullable(task.getPriority()).ifPresent(taskFound::setPriority);
+        Optional.ofNullable(task.getEndsDate()).ifPresent(taskFound::setEndsDate);
+        Optional.ofNullable(task.getStatus()).ifPresent(taskFound::setStatus);
     }
 
     public void deleteTask(Task task) {
@@ -71,15 +75,15 @@ public class TodoList {
                 .toList();
     }
 
-    public List<Task> filterByStatus(Status status) {
+    public List<Task> filterByStatus(String status) {
         return this.taskList.stream()
-                .filter(task -> task.getStatus() == status)
+                .filter(task -> task.getStatus() == Status.fromString(status))
                 .toList();
     }
 
-    public List<Task> filterByEnds_date(LocalDate ends_date) {
+    public List<Task> filterByEndsDate(LocalDate endsDate) {
         return this.taskList.stream()
-                .filter(task -> task.getEnds_date().isAfter(ends_date))
+                .filter(task -> task.getEndsDate().isAfter(endsDate))
                 .toList();
     }
 }

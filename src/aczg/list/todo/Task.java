@@ -6,15 +6,15 @@ import java.time.format.DateTimeFormatter;
 public class Task {
     private String name;
     private String description;
-    private LocalDate ends_date;
+    private LocalDate endsDate;
     private int priority;
     private String category;
     private Status status;
 
-    public Task(String name, String description, String ends_date, String priority, String category, String status) {
+    public Task(String name, String description, String endsDate, String priority, String category, String status) {
         this.name = name;
         this.description = description;
-        this.ends_date = LocalDate.parse(ends_date, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        this.endsDate = LocalDate.parse(endsDate, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         this.priority = Integer.parseInt(priority);
         this.category = category;
         this.status = Status.fromString(status);
@@ -36,12 +36,12 @@ public class Task {
         this.description = description;
     }
 
-    public LocalDate getEnds_date() {
-        return ends_date;
+    public LocalDate getEndsDate() {
+        return endsDate;
     }
 
-    public void setEnds_date(LocalDate ends_date) {
-        this.ends_date = ends_date;
+    public void setEndsDate(LocalDate endsDate) {
+        this.endsDate = endsDate;
     }
 
     public int getPriority() {
@@ -73,7 +73,7 @@ public class Task {
         return "Task{" +
                 "name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", ends_date=" + ends_date +
+                ", ends_date=" + endsDate +
                 ", priority=" + priority +
                 ", category='" + category + '\'' +
                 ", status=" + status +

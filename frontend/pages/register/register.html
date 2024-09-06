@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <div class="container">
+    <div class="text">
+      Nova Tarefa
+    </div>
+    <form action="#">
+      <div class="form-row">
+        <div class="input-data">
+          <input type="text" required id="name">
+          <div class="underline"></div>
+          <label for="name">Título</label>
+        </div>
+        <div class="input-data">
+          <input type="text" required id="category">
+          <div class="underline"></div>
+          <label for="category">Categoria</label>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="input-data">
+          <input type="date" id="date" required>
+          <div class="underline"></div>
+          <label for="date" class="date-label">Data de expiração</label>
+        </div>
+        <div class="input-data">
+          <input type="text" id="priority" required placeholder="1-5">
+          <div class="underline"></div>
+          <label for="priority">Prioridade</label>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="input-data textarea">
+          <textarea rows="8" cols="80" required id="description"></textarea>
+          <br />
+          <div class="underline"></div>
+          <label for="description">Descrição</label>
+          <br />
+          <div class="form-row submit-btn">
+            <div class="input-data">
+              <div class="inner"></div>
+              <input type="submit" value="cadastrar">
+            </div>
+            <div class="input-data">
+              <div class="inner"></div>
+              <input type="button" value="voltar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

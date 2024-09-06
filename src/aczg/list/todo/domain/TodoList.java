@@ -1,4 +1,6 @@
-package aczg.list.todo;
+package aczg.list.todo.domain;
+
+import aczg.list.todo.Status;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

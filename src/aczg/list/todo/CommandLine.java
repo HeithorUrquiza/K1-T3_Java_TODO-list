@@ -1,5 +1,8 @@
 package aczg.list.todo;
 
+import aczg.list.todo.domain.Task;
+import aczg.list.todo.domain.TodoList;
+
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;

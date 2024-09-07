@@ -90,8 +90,8 @@ ul li {
 .add-btn-container {
     display: flex;
     justify-content: end;
-    margin-top: 45px;
-    margin-bottom: 10px;
+    margin-top: 2em;
+    margin-bottom: 3em;
 }
 .add-button {
     color: #fff;
@@ -109,7 +109,7 @@ ul li {
 .navbar {
     display: flex;
     justify-content: end;
-    gap: 1em;
+    gap: 0.5em;
     overflow: hidden;
     background-color: #fff;
 }
@@ -173,3 +173,23 @@ input[type=date]:focus {
     color: #6A9C89 !important;
     opacity: 60%;
 }
+.priority{
+    display: flex;
+    row-gap: 0.1em;
+    flex-direction: column;
+    justify-content: center;
+    color: #16423C;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+}
+/*.priority-text{*/
+/*    font-size: 12px;*/
+/*    text-align: center;*/
+/*    !*color: #6A9C89;*!*/
+/*}*/
+/*.priority-value{*/
+/*    font-size: 12px;*/
+/*    text-align: center;*/
+/*    !*color: #6A9C89;*!*/
+/*}*/

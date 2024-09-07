@@ -20,7 +20,7 @@ body{
     background: #fff;
     width: 800px;
     padding: 25px 40px 10px 40px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 .container .text{
     text-align: center;
@@ -28,13 +28,16 @@ body{
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     background: #16423C;
+    margin-bottom: 1em;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .container form .form-row{
     display: flex;
-    margin-top: 32px;
-    margin-bottom: 50px;
+    /*32 - 50*/
+    margin-top: 2em;
+    margin-bottom: 3em;
+    justify-content: end;
 }
 form .form-row .input-data{
     width: 100%;
@@ -115,7 +118,8 @@ input[id=priority]:focus::placeholder {
 }
 .form-row .submit-btn {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: end !important;
 }
 .submit-btn .input-data{
     overflow: hidden;

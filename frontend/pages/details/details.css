@@ -79,8 +79,8 @@ body{
 .back-btn-container {
     display: flex;
     justify-content: end;
-    margin-top: 3em;
-    margin-bottom: 10px;
+    margin-top: 2em;
+    margin-bottom: 3em;
     margin-right: 2em;
 }
 .back-button {

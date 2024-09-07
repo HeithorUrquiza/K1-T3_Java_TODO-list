@@ -1,5 +1,5 @@
 const listItems = [
-    "Cozinhar",
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
     "Ir na feira",
     "Estudar",
     // "Namorar",
@@ -21,44 +21,30 @@ const listItems = [
 ];
 
 const item = (task, idx) => {
-    if (idx >= 1) {
-        return ` <li id="${idx}" style="border-bottom: solid 1px #16423C">
-            <div class="item-content">
-              <span class="item-status">Doing</span>
-              <span class="item-text">${task}</span>
-              <div class="item-buttons">
-                <button class="item-button">
-                  <i class="fa-solid fa-file-lines icon"></i>
-                </button>
-                <button class="item-button">
-                  <i class="fa-solid fa-pen-to-square icon"></i>
-                </button>
-                <button class="item-button">
-                  <i class="fa-solid fa-trash icon"></i>
-                </button>
-              </div>
-            </div>
-          </li>
-          `;
-    }
-    return `<li id="${idx}" style="border-bottom: solid 1px #16423C; border-top: solid 1px #16423C;">
-        <div class="item-content">
-          <span class="item-status">Doing</span>
-          <span class="item-text">${task}</span>
-          <div class="item-buttons">
-            <button class="item-button">
-              <i class="fa-solid fa-file-lines icon"></i>
-            </button>
-            <button class="item-button">
-              <i class="fa-solid fa-pen-to-square icon"></i>
-            </button>
-            <button class="item-button">
-              <i class="fa-solid fa-trash icon"></i>
-            </button>
-          </div>
+    const borderBottomStyle = idx === listItems.length - 1 ? 'solid 1px #16423C' : 'none';
+    return `
+    <li id="${idx}" style="border-top: solid 1px #16423C; border-bottom: ${borderBottomStyle}">
+      <div class="item-content">
+        <span class="item-status">Doing</span>
+        <span class="item-text">${task}</span>
+        <div class="priority">
+          <span class="priority-text">Pri.</span>
+          <span class="priority-value">3</span>
         </div>
-      </li>
-    `;
-};
+        <div class="item-buttons">
+          <button class="item-button">
+            <i class="fa-solid fa-file-lines icon"></i>
+          </button>
+          <button class="item-button">
+            <i class="fa-solid fa-pen-to-square icon"></i>
+          </button>
+          <button class="item-button">
+            <i class="fa-solid fa-trash icon"></i>
+          </button>
+        </div>
+      </div>
+    </li>
+  `;
+}
 
 listItems.forEach(i => document.getElementById("list-items").innerHTML += item(i, listItems.indexOf(i)));

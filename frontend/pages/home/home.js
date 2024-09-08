@@ -1,32 +1,13 @@
-const listItems = [
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-    "Ir na feira",
-    "Estudar",
-    // "Namorar",
-    // "Dormir",
-    // "Assistir filme",
-    // "Ir ao supermercado",
-    // "Ler",
-    // "Fazer exercícios",
-    // "Lavar a louça",
-    // "Esticar os músculos",
-    // "Fazer compras online",
-    // "Falar com a família",
-    // "Estudar inglês",
-    // "Fazer ginástica",
-    // "Ir ao cinema",
-    // "Fazer caminhada",
-    // "Fazer compras",
-    // "Ler um livro"
-];
+import { taskList } from "../../storage.js";
+import { addTask, getTask, deleteTask, updateTask } from "../../storage-service.js";
 
 const item = (task, idx) => {
-    const borderBottomStyle = idx === listItems.length - 1 ? 'solid 1px #16423C' : 'none';
+    const borderBottomStyle = idx === taskList.length - 1 ? 'solid 1px #16423C' : 'none';
     return `
     <li id="${idx}" style="border-top: solid 1px #16423C; border-bottom: ${borderBottomStyle}">
       <div class="item-content">
         <span class="item-status">Doing</span>
-        <span class="item-text">${task}</span>
+        <span class="item-text">${task.name}</span>
         <div class="priority">
           <span class="priority-text">Pri.</span>
           <span class="priority-value">3</span>
@@ -47,4 +28,4 @@ const item = (task, idx) => {
   `;
 }
 
-listItems.forEach(i => document.getElementById("list-items").innerHTML += item(i, listItems.indexOf(i)));
+taskList.forEach(i => document.getElementById("list-items").innerHTML += item(i, taskList.indexOf(i)));

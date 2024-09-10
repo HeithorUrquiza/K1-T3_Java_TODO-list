@@ -5,6 +5,20 @@ for (let i = 0; i < keys.length; i++) {
     taskList.push(JSON.parse(localStorage.getItem(key)));
 }
 
+window.redirectToDetailsPage = function(taskName) {
+    window.location.replace(`../details/details.html?task-name=${taskName}`)
+}
+
+window.redirectToUpdatePage = function(taskName) {
+    window.location.replace(`../update/update.html?task-name=${taskName}`)
+}
+
+window.deleteTask = function(taskName) {
+    localStorage.removeItem(taskName)
+    alert(`${taskName} excluida da lista`)
+    window.location.reload()
+}
+
 const item = (task, idx) => {
     const borderBottomStyle = idx === taskList.length - 1 ? 'solid 1px #16423C' : 'none';
     return `
@@ -17,15 +31,13 @@ const item = (task, idx) => {
           <span class="priority-value">${task.priority}</span>
         </div>
         <div class="item-buttons">
-          <button class="item-button">
-            <i class="fa-solid fa-file-lines icon">
-              <a href="details.html"></a>
-            </i>
+          <button class="item-button" onclick="redirectToDetailsPage('${task.name}')">
+            <i class="fa-solid fa-file-lines icon"></i>
           </button>
-          <button class="item-button">
+          <button class="item-button" onclick="redirectToUpdatePage('${task.name}')">
             <i class="fa-solid fa-pen-to-square icon"></i>
           </button>
-          <button class="item-button">
+          <button class="item-button delete-btn" onclick="deleteTask('${task.name}')">
             <i class="fa-solid fa-trash icon"></i>
           </button>
         </div>
@@ -37,10 +49,9 @@ const item = (task, idx) => {
 taskList.forEach(i => document.getElementById("list-items").innerHTML += item(i, taskList.indexOf(i)));
 
 // Get the button element
-const button = document.querySelector('.add-btn-container .add-button');
-
+const addButton = document.querySelector('.add-btn-container .add-button');
 // Add an event listener to the button's click event
-button.addEventListener('click', () => {
+addButton.addEventListener('click', () => {
     // Redirect to a new page
     window.location.replace("../register/register.html");
-});
+})

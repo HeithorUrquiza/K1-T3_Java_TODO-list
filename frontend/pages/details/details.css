@@ -11,7 +11,7 @@
     background: #fff;
     width: 800px;
     padding: 25px 40px 10px 40px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 body{
     display: flex;
@@ -41,12 +41,14 @@ body{
     column-gap: 1em;
     justify-content: center;
     margin-top: 1.5em;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
 }
 .item {
     text-align: start;
-    padding-left: 5em;
+    padding-left: 3em;
     font-size: 1.5em;
-    /*background: #eeeeee;*/
 }
 .category {
     grid-area: categoria;
@@ -62,7 +64,7 @@ body{
 }
 .description {
     grid-area: description;
-    width: 94%;
+    width: 93%;
 }
 .field{
     display: inline-block;
@@ -78,7 +80,7 @@ body{
 }
 .back-btn-container {
     display: flex;
-    justify-content: end;
+    justify-content: end !important;
     margin-top: 2em;
     margin-bottom: 3em;
     margin-right: 2em;

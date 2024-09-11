@@ -18,6 +18,12 @@ form.addEventListener('submit', (e) => {
         status: "To Do"
     }
 
+    // Validate the priority
+    if (Number(priority) < 1 || Number(priority) > 5) {
+        alert("Prioridade inválida. O valor precisa estar entre 1 e 5");
+        return;
+    }
+
     const taskSaved = localStorage.getItem(task.name)
     if (taskSaved) {
         alert("Já existe uma tarefa com este nome");

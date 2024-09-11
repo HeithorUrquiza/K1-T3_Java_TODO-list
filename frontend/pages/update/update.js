@@ -74,8 +74,19 @@ updateForm.addEventListener('submit', (e) => {
     const taskSaved = JSON.parse(localStorage.getItem(task.name))
     const taskUpdated = { ...taskSaved, ...newTask }
 
-    localStorage.setItem(taskUpdated.name, JSON.stringify(taskUpdated));
-    localStorage.removeItem(taskSaved.name)
+    // Validate the priority
+    if (Number(priority) < 1 || Number(priority) > 5) {
+        alert("Prioridade inválida. O valor precisa estar entre 1 e 5");
+        return
+    }
+
+    if (taskUpdated.name === task.name) {
+        localStorage.setItem(taskSaved.name, JSON.stringify(taskUpdated));
+    }
+    else {
+        localStorage.setItem(taskUpdated.name, JSON.stringify(taskUpdated));
+        localStorage.removeItem(taskSaved.name)
+    }
     window.location.replace('../home/home.html');
 });
 

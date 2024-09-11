@@ -57,6 +57,10 @@ ul li {
     color: #6A9C89;
     font-size: 13px;
 }
+.item-status:hover {
+    cursor: pointer;
+    opacity: 50%;
+}
 .item-text {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -64,10 +68,10 @@ ul li {
     width: 65%;
     font-size: 16px;
 }
-.item-text:hover {
-    cursor: pointer;
-    color: #C4DAD2;
-}
+/*.item-text:hover {*/
+/*    cursor: pointer;*/
+/*    color: #C4DAD2;*/
+/*}*/
 .item-buttons {
     margin: auto 10px auto 0;
 }
@@ -168,6 +172,7 @@ ul li {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+    cursor: pointer;
 }
 /*input[type=date]:focus {*/
 /*    color: #6A9C89 !important;*/

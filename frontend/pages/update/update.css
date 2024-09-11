@@ -101,7 +101,7 @@ form .form-row .textarea{
 .textarea textarea:valid ~ .underline:before{
     transform: scale(1);
 }
-input[type=date]:required:invalid {
+input[type=date]:required:invalid{
     color: transparent;
 }
 input[type=date]:focus {

@@ -169,10 +169,10 @@ ul li {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-input[type=date]:focus {
-    color: #6A9C89 !important;
-    opacity: 60%;
-}
+/*input[type=date]:focus {*/
+/*    color: #6A9C89 !important;*/
+/*    opacity: 60%;*/
+/*}*/
 .priority{
     display: flex;
     row-gap: 0.1em;
@@ -183,13 +183,3 @@ input[type=date]:focus {
     font-size: 12px;
     font-weight: 500;
 }
-/*.priority-text{*/
-/*    font-size: 12px;*/
-/*    text-align: center;*/
-/*    !*color: #6A9C89;*!*/
-/*}*/
-/*.priority-value{*/
-/*    font-size: 12px;*/
-/*    text-align: center;*/
-/*    !*color: #6A9C89;*!*/
-/*}*/

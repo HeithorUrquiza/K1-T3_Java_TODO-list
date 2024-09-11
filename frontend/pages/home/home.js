@@ -24,7 +24,7 @@ const item = (task, idx) => {
     return `
     <li id="${idx}" style="border-top: solid 1px #16423C; border-bottom: ${borderBottomStyle}">
       <div class="item-content">
-        <span class="item-status">Doing</span>
+        <span class="item-status">${task.status}</span>
         <span class="item-text">${task.name}</span>
         <div class="priority">
           <span class="priority-text">Pri.</span>

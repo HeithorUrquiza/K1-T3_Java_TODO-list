@@ -10,7 +10,7 @@ function pageRender(task) {
         </div>
         <div class="item status">
           <span class="field">Status</span>
-          <p class="info">ToDo</p>
+          <p class="info">${task.status}</p>
         </div>
         <div class="item priority">
           <span class="field">Prioridade</span>

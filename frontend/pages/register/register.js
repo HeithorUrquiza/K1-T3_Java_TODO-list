@@ -1,5 +1,3 @@
-// import { addTask } from "../../storage-service.js";
-
 const form = document.getElementById('register-form');
 
 form.addEventListener('submit', (e) => {
@@ -16,7 +14,8 @@ form.addEventListener('submit', (e) => {
         category,
         date,
         priority,
-        description
+        description,
+        status: "To Do"
     }
 
     const taskSaved = localStorage.getItem(task.name)

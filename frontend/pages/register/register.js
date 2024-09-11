@@ -42,5 +42,3 @@ button.addEventListener('click', () => {
     // Redirect to a new page
     window.location.replace('../home/home.html');
 });
-
-

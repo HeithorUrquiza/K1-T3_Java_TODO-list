@@ -1,4 +1,4 @@
-# TODO-List
+# TODO-List by Heithor Urquiza
 
 ## Descrição
 
@@ -33,19 +33,9 @@ Trata-se de uma aplicação Java para gerenciar uma lista de tarefas (To-Do List
       ```
     - O programa iniciará e mostrará o menu interativo para que você possa gerenciar a lista de tarefas.
 
-## Comentários sobre a Solução
+## Melhorias
 
-- **Interatividade com o Usuário**: O uso de um menu baseado em texto é uma solução simples e eficaz para a interação com o usuário. No entanto, o código exige que o usuário insira informações no formato correto, como `nome; descricao; encerramento; prioridade; categoria; status` para cadastrar ou atualizar uma tarefa. Uma melhoria possível seria adicionar validações mais robustas para garantir que a entrada do usuário esteja correta.
-
-- **Modularidade**: O código está razoavelmente bem modularizado, com métodos separados para cada funcionalidade. Isso facilita a manutenção e a extensão do código.
-
-- **Uso de Singleton**: A `TodoList` é implementada como um Singleton, o que é adequado se você quiser garantir que apenas uma lista de tarefas seja compartilhada em toda a aplicação. No entanto, esse padrão pode tornar o código menos flexível, por exemplo, se você quiser suportar múltiplas listas de tarefas.
-
-- **Eficiência**: As operações de filtragem e busca são feitas em listas, o que pode ser ineficiente se a lista for muito grande. Se a lista crescer significativamente, você pode considerar usar estruturas de dados mais eficientes ou adicionar índices para melhorar a velocidade de pesquisa.
-
-- **Manutenção de Estado**: O código atual mantém o estado (a lista de tarefas) apenas em memória. Se a aplicação for encerrada, todas as tarefas serão perdidas. Em um cenário real, seria necessário implementar uma forma de persistência, como salvar as tarefas em um arquivo ou banco de dados.
-
-- **Feedback ao Usuário**: A aplicação fornece feedback básico ao usuário, como confirmar se uma tarefa foi adicionada ou excluída com sucesso. Esse feedback é crucial para garantir uma boa experiência do usuário.
+Foi adicionado ao arquivo páginas para o FrontEnd da aplicação, garantindo uma prévia experiência do funcionamento completo da aplicação.
 
 ## Conclusão
 
